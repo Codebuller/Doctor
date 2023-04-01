@@ -74,8 +74,13 @@ const isOutsideClicked = (event) => {
         <button class="p-link layout-topbar-menu-button layout-topbar-button" @click="onTopBarMenuButton()">
             <i class="pi pi-ellipsis-v"></i>
         </button>
-
+        
         <div class="layout-topbar-menu" :class="topbarMenuClasses">
+        <div class="col-12 mb-2 lg:col-4 lg:mb-0" style="margin-right:10vw">
+        <input class="p-inputtext p-component" type="text" placeholder="Поиск..." />
+        </div>  
+
+           
             <button @click="onTopBarMenuButton()" class="p-link layout-topbar-button">
                 <i class="pi pi-calendar"></i>
                 <span>Calendar</span>
