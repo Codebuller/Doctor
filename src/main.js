@@ -8,7 +8,7 @@ import AccordionTab from 'primevue/accordiontab';
 import Avatar from 'primevue/avatar';
 import AvatarGroup from 'primevue/avatargroup';
 import Badge from 'primevue/badge';
-
+import { createStore } from 'vuex'
 import BlockUI from 'primevue/blockui';
 import Button from 'primevue/button';
 import Breadcrumb from 'primevue/breadcrumb';
@@ -97,10 +97,25 @@ import VirtualScroller from 'primevue/virtualscroller';
 import './assets/styles.scss';
 const app = createApp(App);
 
+const store = createStore({
+    state () {
+      return {
+        isLog: false
+      }
+    },
+    mutations: {
+      logIn (state) {
+        state.isLog = true;
+      },
+      logOut (state){
+        state.isLog = false;
+      }
+    }
+  })
 
 app.use(PrimeVue, {ripple: true})
 app.use(router)
-
+app.use(store)
 
 
 app.component('Accordion', Accordion);

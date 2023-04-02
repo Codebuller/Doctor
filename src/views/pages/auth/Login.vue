@@ -39,7 +39,7 @@ const logoUrl = computed(() => {
                             </div>
                             <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Forgot password?</a>
                         </div>
-                        <Button label="Sign In" class="w-full p-3 text-xl"></Button>
+                        <Button onClick="console.log(store.commit('logIn'))" label="Sign In" class="w-full p-3 text-xl"></Button>
                     </div>
                 </div>
             </div>
